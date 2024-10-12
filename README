@@ -1,0 +1,52 @@
+# Deploy-Backend-Render-5minute
+
+#How to Deploy a 4 geeks academy boilerplate on render.com
+
+#Render.com Create free Postgre Database and link External in env.
+
+#Sample .env
+
+# Back-End Variables
+DATABASE_URL=<Connect-External-”External Database URL”>
+FLASK_APP_KEY="any key works"
+FLASK_APP=src/app.py
+FLASK_DEBUG=1
+DEBUG=TRUE
+
+
+# Front-End Variables
+BASENAME=/
+#BACKEND_URL=
+
+
+#BACKEND CODE CHANGE  #NOTE THAT THIS app.py HAS JWT EXTENDED AND CLOUDINARY LIBRARIES INSTALLED, YOU MAY NEED TO DELETE IF YOU ARE NOT USING CLOUDINARY OR JWT EXTENDED. YOU MAY NEED TO ADD LIBRARIES TO app.py IF YOU ARE USING THEM.
+
+REPLACE app.py FILE WITH THIS app.py 
+
+REPLACE Pipfile FILE WITH THIS Pipfile
+
+RENDER
+1. Link Repository and branch VIA GITHUB
+
+#IN YOUR RENDER DASHBOARD, UPDATE THE BUILD COMMAND TO:  #ROOT IS EMPTY
+2. pip install pipenv && pipenv install --system --deploy
+
+#IN YOUR RENDER DASHBOARD, MAKE YOUR START COMMAND
+3. gunicorn --chdir src app:app
+
+#IN ROOT TERMINAL BASH
+
+#Delete current pipfile.lock
+rm Pipfile.lock
+
+#CREATE NEW PIPFILE.LOCK
+pipenv lock
+
+#SYNC NEW PIPFILE.LOCK
+pipenv install
+
+#ADD COMMIT AND PUSH CHANGES
+git add Pipfile Pipfile.lock
+git commit -m "Update Pipfile and Pipfile.lock"
+git push origin <YourBranchName>
+
