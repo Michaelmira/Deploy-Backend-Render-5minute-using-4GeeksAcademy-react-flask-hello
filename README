@@ -50,3 +50,16 @@ git add Pipfile Pipfile.lock
 git commit -m "Update Pipfile and Pipfile.lock"
 git push origin <YourBranchName>
 
+#DONE!!!! DONT FORGET TO pipenv run migrate and upgrade or pipenv run reset_db if your database isnt clean. 
+#TROUBLE WITH DATABASE? 
+#TRY THIS IN TERMINAL
+
+rm -rf migrations
+
+pipenv run flask db init
+
+pipenv run flask db migrate -m "Initial migration"
+
+pipenv run flask db upgrade
+
+pipenv run reset_db
