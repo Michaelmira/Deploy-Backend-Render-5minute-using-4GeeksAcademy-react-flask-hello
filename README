@@ -50,7 +50,13 @@ git add Pipfile Pipfile.lock
 git commit -m "Update Pipfile and Pipfile.lock"
 git push origin <YourBranchName>
 
-#DONE!!!! DONT FORGET TO pipenv run migrate and upgrade or pipenv run reset_db if your database isnt clean. 
+
+DONE!!! DONE DONE! TEST IT! HIT DEPLOY LATEST COMMIT!!! 
+DONE!!! DONE DONE! TEST IT! HIT DEPLOY LATEST COMMIT!!! 
+DONE!!! DONE DONE! TEST IT! HIT DEPLOY LATEST COMMIT!!! 
+DONE!!! DONE DONE! TEST IT! HIT DEPLOY LATEST COMMIT!!! 
+
+#DONT FORGET TO pipenv run migrate and upgrade or pipenv run reset_db if your database isnt clean. 
 #TROUBLE WITH DATABASE? 
 #TRY THIS IN TERMINAL
 
