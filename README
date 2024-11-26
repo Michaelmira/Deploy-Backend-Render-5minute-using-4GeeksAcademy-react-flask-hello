@@ -69,3 +69,6 @@ pipenv run flask db migrate -m "Initial migration"
 pipenv run flask db upgrade
 
 pipenv run reset_db
+
+Frequently Recieved Problems 
+pipenv install gunicorn (On test run needed to install this. 
